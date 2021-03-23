@@ -1,6 +1,8 @@
 package isetj.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -26,8 +28,18 @@ public class CoffeeServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String r = request.getParameter("r");
+		String txt = request.getParameter("txt");
+		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>\r\n"
+				+ "<html lang=\"en\">\r\n"
+				+ "<head>");
+		out.println("<title>coffee shop</title></head>");
+		out.println("<body><img src=\"C:\\Users\\monta\\eclipse-workspace\\tp1\\WebContent\\coffe.JPG\">");
+		out.println("<p>merci de nous avoir fait parvenir la remarque suivent concernant <strong>"+r+"</strong></p>");
+		out.println();
+		out.println(txt);
+		out.println("</body></html>");
 	}
 
 	/**

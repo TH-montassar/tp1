@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+.fr{
+background-color:rgb(200, 206, 206);
+margin-left:50px;
+margin-right :400px;
+
+}
+select
+{
+	width :320px;
+}
+
+button{
+    text-items: right;
+    color :red;
+     padding-right: 20px;
+}
+b{
+	 margin-right :400px;
+	 
+}
